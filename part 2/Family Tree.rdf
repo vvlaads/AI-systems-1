@@ -1,0 +1,698 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree/"
+     xml:base="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:Family_Tree="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#ex-husband -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#ex-husband">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Divorce"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Man"/>
+        <rdfs:comment>Бывший муж</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#ex-wife -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#ex-wife">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Divorce"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Woman"/>
+        <rdfs:comment>Бывшая жена</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#hasChild -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#hasChild">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#hasParent"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Person"/>
+        <rdfs:comment>Человек имеет ребенка</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#hasParent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#hasParent">
+        <rdfs:comment>Человек имеет родителя</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#husband -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#husband">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Marriage"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Man"/>
+        <rdfs:comment>Муж</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#wife -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#wife">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Marriage"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Woman"/>
+        <rdfs:comment>Жена</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#birthYear -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#birthYear">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Год рождения человека</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#deathYear -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#deathYear">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Год смерти человека</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#divorceYear -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#divorceYear">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Divorce"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#marriageYear"/>
+        <rdfs:comment>Год расторжения брака</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#marriageYear -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#marriageYear">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Marriage"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Год вступления в брак</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#name">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Имя человека</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Divorce -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Divorce">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Marriage"/>
+        <rdfs:comment>Развод</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Man -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Man">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Person"/>
+        <rdfs:comment>Мужчина</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Marriage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Marriage">
+        <rdfs:comment>Брак</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Person">
+        <rdfs:comment>Человек</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Woman -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Woman">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Person"/>
+        <rdfs:comment>Женщина</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Deeva_Raisa_Vasilyevna -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Deeva_Raisa_Vasilyevna">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Woman"/>
+        <Family_Tree:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1940</Family_Tree:birthYear>
+        <Family_Tree:deathYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2018</Family_Tree:deathYear>
+        <Family_Tree:name>Деева Раиса Васильевна</Family_Tree:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Gorskikh_Lyudmila_Egorovna -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Gorskikh_Lyudmila_Egorovna">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Woman"/>
+        <Family_Tree:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1955</Family_Tree:birthYear>
+        <Family_Tree:name>Горских Людмила Егоровна</Family_Tree:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Ivanova_Lyudmila_Vasilyevna -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Ivanova_Lyudmila_Vasilyevna">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Woman"/>
+        <Family_Tree:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1947</Family_Tree:birthYear>
+        <Family_Tree:name>Иванова Людмила Васильевна</Family_Tree:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Korableva_Valentina_Egorovna -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Korableva_Valentina_Egorovna">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Woman"/>
+        <Family_Tree:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1963</Family_Tree:birthYear>
+        <Family_Tree:name>Кораблева Валентина Егоровна</Family_Tree:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Maltsev_Anatoly_Vladimirovich -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Maltsev_Anatoly_Vladimirovich">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Man"/>
+        <Family_Tree:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1951</Family_Tree:birthYear>
+        <Family_Tree:name>Мальцев Анатолий Владимирович</Family_Tree:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Maltsev_Vladimir_Borisovich -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Maltsev_Vladimir_Borisovich">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Man"/>
+        <Family_Tree:hasChild rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Maltsev_Anatoly_Vladimirovich"/>
+        <Family_Tree:hasChild rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Ogoshkova_Galina_Vladimirovna"/>
+        <Family_Tree:hasChild rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Silintseva_Nina_Vladimirovna"/>
+        <Family_Tree:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1926</Family_Tree:birthYear>
+        <Family_Tree:deathYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1997</Family_Tree:deathYear>
+        <Family_Tree:name>Мальцев Владимир Борисович</Family_Tree:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Maltseva_Zoya_Vasilyevna -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Maltseva_Zoya_Vasilyevna">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Woman"/>
+        <Family_Tree:hasChild rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Maltsev_Anatoly_Vladimirovich"/>
+        <Family_Tree:hasChild rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Ogoshkova_Galina_Vladimirovna"/>
+        <Family_Tree:hasChild rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Silintseva_Nina_Vladimirovna"/>
+        <Family_Tree:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1931</Family_Tree:birthYear>
+        <Family_Tree:deathYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2022</Family_Tree:deathYear>
+        <Family_Tree:name>Мальцева Зоя Васильевна</Family_Tree:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Ogoshkova_Galina_Vladimirovna -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Ogoshkova_Galina_Vladimirovna">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Woman"/>
+        <Family_Tree:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1952</Family_Tree:birthYear>
+        <Family_Tree:name>Огошкова Галина Владимировна</Family_Tree:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Shchetinina_Svetlana_Vasilyevna -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Shchetinina_Svetlana_Vasilyevna">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Woman"/>
+        <Family_Tree:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1950</Family_Tree:birthYear>
+        <Family_Tree:name>Щетинина Светлана Васильевна</Family_Tree:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Silintsev_Alexey_Sergeevich -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Silintsev_Alexey_Sergeevich">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Man"/>
+        <Family_Tree:hasChild rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Silintseva_Sofya_Alekseevna"/>
+        <Family_Tree:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1984</Family_Tree:birthYear>
+        <Family_Tree:name>Силинцев Алексей Сергеевич</Family_Tree:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Silintsev_Andrey_Vladimirovich -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Silintsev_Andrey_Vladimirovich">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Man"/>
+        <Family_Tree:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1961</Family_Tree:birthYear>
+        <Family_Tree:deathYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2012</Family_Tree:deathYear>
+        <Family_Tree:name>Силинцев Андрей Владимирович</Family_Tree:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Silintsev_Danil_Vitalievich -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Silintsev_Danil_Vitalievich">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Man"/>
+        <Family_Tree:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2021</Family_Tree:birthYear>
+        <Family_Tree:name>Силинцев Данил Витальевич</Family_Tree:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Silintsev_Sergey_Vitalievich -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Silintsev_Sergey_Vitalievich">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Man"/>
+        <Family_Tree:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2011</Family_Tree:birthYear>
+        <Family_Tree:name>Силинцев Сергей Витальевич</Family_Tree:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Silintsev_Sergey_Vladimirovich -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Silintsev_Sergey_Vladimirovich">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Man"/>
+        <Family_Tree:hasChild rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Silintsev_Alexey_Sergeevich"/>
+        <Family_Tree:hasChild rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Silintsev_Vitaly_Sergeevich"/>
+        <Family_Tree:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1958</Family_Tree:birthYear>
+        <Family_Tree:deathYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2014</Family_Tree:deathYear>
+        <Family_Tree:name>Силинцев Сергей Владимирович</Family_Tree:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Silintsev_Vitaly_Sergeevich -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Silintsev_Vitaly_Sergeevich">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Man"/>
+        <Family_Tree:hasChild rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Silintsev_Danil_Vitalievich"/>
+        <Family_Tree:hasChild rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Silintsev_Sergey_Vitalievich"/>
+        <Family_Tree:hasChild rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Silintsev_Vladislav_Vitalievich"/>
+        <Family_Tree:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1980</Family_Tree:birthYear>
+        <Family_Tree:name>Силинцев Виталий Сергеевич</Family_Tree:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Silintsev_Vladimir_Alekseevich -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Silintsev_Vladimir_Alekseevich">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Man"/>
+        <Family_Tree:hasChild rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Silintsev_Andrey_Vladimirovich"/>
+        <Family_Tree:hasChild rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Silintsev_Sergey_Vladimirovich"/>
+        <Family_Tree:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1932</Family_Tree:birthYear>
+        <Family_Tree:deathYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2008</Family_Tree:deathYear>
+        <Family_Tree:name>Силинцев Владимир Алексеевич</Family_Tree:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Silintsev_Vladislav_Vitalievich -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Silintsev_Vladislav_Vitalievich">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Man"/>
+        <Family_Tree:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2005</Family_Tree:birthYear>
+        <Family_Tree:name>Силинцев Владислав Витальевич</Family_Tree:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Silintseva_Alyona_Olegovna -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Silintseva_Alyona_Olegovna">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Woman"/>
+        <Family_Tree:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1988</Family_Tree:birthYear>
+        <Family_Tree:name>Силинцева Алёна Олеговна</Family_Tree:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Silintseva_Anastasia_Ivanovna -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Silintseva_Anastasia_Ivanovna">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Woman"/>
+        <Family_Tree:hasChild rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Silintsev_Andrey_Vladimirovich"/>
+        <Family_Tree:hasChild rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Silintsev_Sergey_Vladimirovich"/>
+        <Family_Tree:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1937</Family_Tree:birthYear>
+        <Family_Tree:name>Силинцева Анастасия Ивановна</Family_Tree:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Silintseva_Anastasia_Petrovna -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Silintseva_Anastasia_Petrovna">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Woman"/>
+        <Family_Tree:hasChild rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Silintseva_Sofya_Alekseevna"/>
+        <Family_Tree:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1983</Family_Tree:birthYear>
+        <Family_Tree:name>Силинцева Анастасия Петровна</Family_Tree:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Silintseva_Maria_Yurievna -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Silintseva_Maria_Yurievna">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Woman"/>
+        <Family_Tree:hasChild rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Silintsev_Danil_Vitalievich"/>
+        <Family_Tree:hasChild rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Silintsev_Sergey_Vitalievich"/>
+        <Family_Tree:hasChild rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Silintsev_Vladislav_Vitalievich"/>
+        <Family_Tree:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1979</Family_Tree:birthYear>
+        <Family_Tree:name>Силинцева Мария Юрьевна</Family_Tree:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Silintseva_Nina_Vladimirovna -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Silintseva_Nina_Vladimirovna">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Woman"/>
+        <Family_Tree:hasChild rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Silintsev_Alexey_Sergeevich"/>
+        <Family_Tree:hasChild rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Silintsev_Vitaly_Sergeevich"/>
+        <Family_Tree:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1957</Family_Tree:birthYear>
+        <Family_Tree:name>Силинцева Нина Владимировна</Family_Tree:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Silintseva_Sofya_Alekseevna -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Silintseva_Sofya_Alekseevna">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Woman"/>
+        <Family_Tree:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2010</Family_Tree:birthYear>
+        <Family_Tree:name>Силинцева Софья Алексеевна</Family_Tree:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Tamendarova_Elena_Vasilyevna -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Tamendarova_Elena_Vasilyevna">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Woman"/>
+        <Family_Tree:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1945</Family_Tree:birthYear>
+        <Family_Tree:name>Тамендарова Елена Васильевна</Family_Tree:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Ustyugov_Egor_Matveevich -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Ustyugov_Egor_Matveevich">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Man"/>
+        <Family_Tree:hasChild rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Gorskikh_Lyudmila_Egorovna"/>
+        <Family_Tree:hasChild rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Korableva_Valentina_Egorovna"/>
+        <Family_Tree:hasChild rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Zachinyaeva_Tatiana_Egorovna"/>
+        <Family_Tree:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1928</Family_Tree:birthYear>
+        <Family_Tree:deathYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1986</Family_Tree:deathYear>
+        <Family_Tree:name>Устюгов Егор Матвеевич</Family_Tree:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Ustyugova_Zoya_Akimovna -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Ustyugova_Zoya_Akimovna">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Woman"/>
+        <Family_Tree:hasChild rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Gorskikh_Lyudmila_Egorovna"/>
+        <Family_Tree:hasChild rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Korableva_Valentina_Egorovna"/>
+        <Family_Tree:hasChild rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Zachinyaeva_Tatiana_Egorovna"/>
+        <Family_Tree:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1933</Family_Tree:birthYear>
+        <Family_Tree:deathYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1979</Family_Tree:deathYear>
+        <Family_Tree:name>Устюгова Зоя Акимовна</Family_Tree:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Zachinyaev_Gennady_Vasilyevich -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Zachinyaev_Gennady_Vasilyevich">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Man"/>
+        <Family_Tree:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1935</Family_Tree:birthYear>
+        <Family_Tree:deathYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2023</Family_Tree:deathYear>
+        <Family_Tree:name>Зачиняев Геннадий Васильевич</Family_Tree:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Zachinyaev_Vasily_Kuzmich -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Zachinyaev_Vasily_Kuzmich">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Man"/>
+        <Family_Tree:hasChild rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Deeva_Raisa_Vasilyevna"/>
+        <Family_Tree:hasChild rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Ivanova_Lyudmila_Vasilyevna"/>
+        <Family_Tree:hasChild rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Shchetinina_Svetlana_Vasilyevna"/>
+        <Family_Tree:hasChild rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Tamendarova_Elena_Vasilyevna"/>
+        <Family_Tree:hasChild rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Zachinyaev_Gennady_Vasilyevich"/>
+        <Family_Tree:hasChild rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Zachinyaev_Yuri_Vasilyevich"/>
+        <Family_Tree:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1910</Family_Tree:birthYear>
+        <Family_Tree:deathYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1978</Family_Tree:deathYear>
+        <Family_Tree:name>Зачиняев Василий Кузьмич</Family_Tree:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Zachinyaev_Yuri_Vasilyevich -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Zachinyaev_Yuri_Vasilyevich">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Man"/>
+        <Family_Tree:hasChild rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Silintseva_Maria_Yurievna"/>
+        <Family_Tree:hasChild rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Zachinyaeva_Natalia_Yurievna"/>
+        <Family_Tree:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1953</Family_Tree:birthYear>
+        <Family_Tree:name>Зачиняев Юрий Васильевич</Family_Tree:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Zachinyaeva_Natalia_Yurievna -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Zachinyaeva_Natalia_Yurievna">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Woman"/>
+        <Family_Tree:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1984</Family_Tree:birthYear>
+        <Family_Tree:name>Зачиняева Наталья Юрьевна</Family_Tree:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Zachinyaeva_Tatiana_Egorovna -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Zachinyaeva_Tatiana_Egorovna">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Woman"/>
+        <Family_Tree:hasChild rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Silintseva_Maria_Yurievna"/>
+        <Family_Tree:hasChild rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Zachinyaeva_Natalia_Yurievna"/>
+        <Family_Tree:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1958</Family_Tree:birthYear>
+        <Family_Tree:name>Зачиняева Татьяна Егоровна</Family_Tree:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Zachinyaeva_Tatiana_Kuzmovna -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Zachinyaeva_Tatiana_Kuzmovna">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Woman"/>
+        <Family_Tree:hasChild rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Deeva_Raisa_Vasilyevna"/>
+        <Family_Tree:hasChild rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Ivanova_Lyudmila_Vasilyevna"/>
+        <Family_Tree:hasChild rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Shchetinina_Svetlana_Vasilyevna"/>
+        <Family_Tree:hasChild rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Tamendarova_Elena_Vasilyevna"/>
+        <Family_Tree:hasChild rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Zachinyaev_Gennady_Vasilyevich"/>
+        <Family_Tree:hasChild rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Zachinyaev_Yuri_Vasilyevich"/>
+        <Family_Tree:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1915</Family_Tree:birthYear>
+        <Family_Tree:deathYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1984</Family_Tree:deathYear>
+        <Family_Tree:name>Зачиняева Татьяна Кузьмовна</Family_Tree:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#divorce_2020 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#divorce_2020">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Divorce"/>
+        <Family_Tree:ex-husband rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Silintsev_Alexey_Sergeevich"/>
+        <Family_Tree:ex-wife rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Silintseva_Anastasia_Petrovna"/>
+        <Family_Tree:divorceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2020</Family_Tree:divorceYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#marriage_1933 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#marriage_1933">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Marriage"/>
+        <Family_Tree:husband rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Zachinyaev_Vasily_Kuzmich"/>
+        <Family_Tree:wife rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Zachinyaeva_Tatiana_Kuzmovna"/>
+        <Family_Tree:marriageYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1933</Family_Tree:marriageYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#marriage_1951 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#marriage_1951">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Marriage"/>
+        <Family_Tree:husband rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Maltsev_Vladimir_Borisovich"/>
+        <Family_Tree:wife rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Maltseva_Zoya_Vasilyevna"/>
+        <Family_Tree:marriageYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1951</Family_Tree:marriageYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#marriage_1954 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#marriage_1954">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Marriage"/>
+        <Family_Tree:husband rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Ustyugov_Egor_Matveevich"/>
+        <Family_Tree:wife rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Ustyugova_Zoya_Akimovna"/>
+        <Family_Tree:marriageYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1954</Family_Tree:marriageYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#marriage_1958 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#marriage_1958">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Marriage"/>
+        <Family_Tree:husband rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Silintsev_Vladimir_Alekseevich"/>
+        <Family_Tree:wife rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Silintseva_Anastasia_Ivanovna"/>
+        <Family_Tree:marriageYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1958</Family_Tree:marriageYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#marriage_1978 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#marriage_1978">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Marriage"/>
+        <Family_Tree:husband rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Zachinyaev_Yuri_Vasilyevich"/>
+        <Family_Tree:wife rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Zachinyaeva_Tatiana_Egorovna"/>
+        <Family_Tree:marriageYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1978</Family_Tree:marriageYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#marriage_1979 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#marriage_1979">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Marriage"/>
+        <Family_Tree:husband rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Silintsev_Sergey_Vladimirovich"/>
+        <Family_Tree:wife rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Silintseva_Nina_Vladimirovna"/>
+        <Family_Tree:marriageYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1979</Family_Tree:marriageYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#marriage_2001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#marriage_2001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Marriage"/>
+        <Family_Tree:husband rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Silintsev_Vitaly_Sergeevich"/>
+        <Family_Tree:wife rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Silintseva_Maria_Yurievna"/>
+        <Family_Tree:marriageYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2001</Family_Tree:marriageYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#marriage_2007 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#marriage_2007">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Marriage"/>
+        <Family_Tree:husband rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Silintsev_Alexey_Sergeevich"/>
+        <Family_Tree:wife rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Silintseva_Anastasia_Petrovna"/>
+        <Family_Tree:marriageYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2007</Family_Tree:marriageYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#marriage_2022 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#marriage_2022">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Marriage"/>
+        <Family_Tree:husband rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Silintsev_Alexey_Sergeevich"/>
+        <Family_Tree:wife rdf:resource="http://www.semanticweb.org/vvlaa/ontologies/2025/Family_Tree#Silintseva_Alyona_Olegovna"/>
+        <Family_Tree:marriageYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2022</Family_Tree:marriageYear>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
